@@ -5,7 +5,8 @@
 * @since 01 May, 2021
 **/
 
-//O(a + b)
+//O(a + b) Time complexity
+//O(1) Space complexity
 function useTwoInputs(a, b) {
   console.log("Two Inputs function -> ");
   for(let i = 0;i < a.length; i++) {
@@ -29,7 +30,8 @@ function useTwoInputsV2(a, b) {
   })
 }
 
-//O(n)
+//O(n) Time complexity
+//O(1) Space complexity
 function useOneInputs(n) {
     console.log("One Inputs function -> ");
   for(let i = 0 ;i < n.length; i++) {
