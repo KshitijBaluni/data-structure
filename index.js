@@ -1,3 +1,9 @@
+/**
+* Big O Notation
+* 
+* @author Kshitij Baluni aka KB
+* @since 01 May, 2021
+**/
 
 //O(a + b)
 function useTwoInputs(a, b) {
