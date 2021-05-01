@@ -11,6 +11,18 @@ function useTwoInputs(a, b) {
   }
 }
 
+//Updated for loop to for each
+function useTwoInputsV2(a, b) {
+  console.log("Two Inputs function Version 2 -> ");
+  a.forEach({ data =>
+    console.log(data)
+  })
+
+  b.forEach({data =>
+    console.log(data)
+  })
+}
+
 //O(n)
 function useOneInputs(n) {
     console.log("One Inputs function -> ");
@@ -19,5 +31,15 @@ function useOneInputs(n) {
   }
 }
 
+// Updated for loop to for each loop
+function useOneInputsV2(n) {
+  console.log("One Inputs function Version 2 -> ");
+  n.forEach(data => {
+    console.log(data);
+  })
+}
+
 useOneInputs([1,2,3,4,6,4,7,3,6])
 useTwoInputs([1,2,3,4,6,4,7,3,6], [23,42,52,])
+
+useOneInputsV2([1,2,3,4,6,4,7,3,6])
