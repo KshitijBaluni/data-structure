@@ -43,7 +43,47 @@ function containsCommonElementWithoutForeach(array1, array2) {
   return false;
 }
 
+//O(n) Optimized by removing neseted loops
+function containCommonElementsOptimized(array1, array2) {
+  let map = {};
+  for(let i=0; i < array1.length; i++) {
+    if(!map[array1[i]]) {
+      const item = array1[i];
+      map[item] = true;
+    }
+  }
+  
+  for( let j=0; j < array2.length; j++) {
+    if(map[array2[j]])
+      return true;
+  }
+  return false;
+}
+
+//Added foreach to the Optimized loop
+function containCommonElementsOptimizedAddedForeach(array1, array2) {
+  let map = {};
+  array1.forEach( data1 => {
+    if(!map[data1]) {
+      const item = data1;
+      map[item] = true;
+    }
+  })
+   console.log(map);
+   
+  array2.forEach(data2 => {
+    if(map[data2])
+      return true;
+  })
+  return false;
+}
+
+
 
 //Testing
 console.log("Output with foreach:" + containsCommonElementWithForEach(array1, array2));
 console.log("output without foreach:" + containsCommonElementWithoutForeach(array1, array2));
+
+console.log("output for Optimized function :" + containCommonElementsOptimized(array1, array2));
+
+console.log("output for Optimized and added foreach function :" + containCommonElementsOptimizedAddedForeach(array1, array2));
