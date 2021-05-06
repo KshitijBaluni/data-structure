@@ -6,7 +6,7 @@
 **/
 
 //O(n) Time complexity
-//O(1) Space complexity
+//O(n) Space complexity
 function useOneInputs(n) {
     console.log("One Inputs function -> ");
   for(let i = 0 ;i < n.length; i++) {
@@ -23,7 +23,7 @@ function useOneInputsV2(n) {
 }
 
 //O(a + b) Time complexity
-//O(1) Space complexity
+//O(a + b) Space complexity
 function useTwoInputs(a, b) {
   console.log("Two Inputs function -> ");
   for(let i = 0;i < a.length; i++) {
