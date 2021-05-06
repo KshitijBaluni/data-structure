@@ -10,15 +10,18 @@ class Array {
     this.data = {}
   }
 
+  //O(1)
   get(index) {
     return this.data[index];
   }
 
+  //O(1)
   push(value) {
     this.data[this.length] = value;
     this.length++;
   }
 
+  //O(1)
   pop() {
     const lastValue = this.data[this.length-1];
     delete this.data[this.length -1];
@@ -26,6 +29,7 @@ class Array {
     return lastValue;
   }
 
+  //O(n)
   delete(index) {
     const valueDelete = this.data[index];
     this.shift(index);
@@ -33,6 +37,7 @@ class Array {
     return valueDelete;
   }
 
+  //shift the data for deletion.
   shift(index) {
     for(let i = index; i < this.length - 1; i++) {
       this.data[i] = this.data[i + 1];
@@ -40,6 +45,7 @@ class Array {
   }
 }
 
+//Test Data
 const myArray = new Array();
 myArray.push("hi");
 myArray.push("how");
